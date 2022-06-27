@@ -157,7 +157,10 @@ function getCurrentCountry() {
       //then el 7aga ele btrtrnha bseha lle b3deha
       await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=69a8f63e8b96415ea569992bd8980f56`).
       then(response => response.json()).then((response) =>  currentCountry = response.results[0].components.country);
-      weatherApi(currentCountry);
+      if(serchInput) {
+        weatherApi(currentCountry);
+      }
+      
     }
     // btb3t el position f 7alt el nga7 k argument ll function successfulLookup >>> mnha ta5d el latitude , longitude
     navigator.geolocation.getCurrentPosition(successfulLookup);
