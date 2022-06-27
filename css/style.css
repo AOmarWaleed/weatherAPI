@@ -1,0 +1,299 @@
+/* --------------------------------------------------START GLOBAL */
+:root {
+    --main-color: #1e202b;
+    --seconed-color: #009ad8;
+    --card-color: #323544;
+}
+
+.p_color {
+    color: #bfc1c8;
+}
+
+.main_background {
+    background-color: var(--main-color);
+}
+
+/* --------------------------------------------------END GLOBAL */
+
+
+
+/* START navbar */
+.navbar-brand img {
+    width: 64px;
+}
+
+.navbar {
+    background-color: var(--main-color);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    background-color: var(--main-color);
+    position: relative;
+    transition: .3s all;
+    letter-spacing: .1em;
+    border: 4px solid var(--seconed-color);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    top: -4px;
+    left: 60%;
+    background-color: var(--main-color);
+    transition: .5s all;   
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover::after {
+    left: 15%;
+    width: 60px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {   
+    box-shadow: 0 0 30px 0px var(--seconed-color);
+    letter-spacing: .3em;
+    
+}
+
+/* MEDIA QUERY */
+.navbar-toggler:focus,
+.navbar-toggler:active{
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler ,
+.navbar-toggler i {
+    transition: .3s all;
+}
+
+
+.navbar-toggler:hover {
+    border: 1px solid var(--seconed-color);
+    
+
+}
+.navbar-toggler:hover i {
+    color: var(--seconed-color) !important;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .navbar-brand {
+        margin-bottom: 20px;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        margin-bottom: 20px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link:after {
+        left: 90%;
+    }
+    
+}
+
+/* END navbar */
+
+/* START INFO SECTION */
+#weatherInfo {
+    background-image: url(../images/banner.png);
+    background-position: top;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: var(--main-color);
+}
+
+#weatherInfo .container form button {
+    right: 12px;
+    top: 8px;
+}
+
+#weatherInfo .container form input[type='text']{
+    color: white;
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+}
+
+#weatherInfo .container form input[type='text']::placeholder {
+    text-transform: capitalize;
+    color: gray;   
+}
+
+
+
+
+#weatherInfo .container .row .col-lg-4 .card{
+    background-color: var(--card-color);
+    color: white;
+    position: relative; 
+    overflow: hidden;
+}
+
+#currentDegree {
+    font-size: 6.5rem;
+}
+
+#weatherInfo .container .row .card .card-body p:last-child {
+    color: var(--seconed-color);
+}
+
+#weatherInfo .container .row .col-lg-4:nth-child(2) .card .card-body,
+#weatherInfo .container .row .col-lg-4:nth-child(3) .card .card-body{   
+    padding: 50px;
+}
+
+
+.card::before {
+    content: '';
+    background-image: linear-gradient(rgb(120, 80, 215) ,var(--seconed-color),var(--main-color),rgb(128, 24, 207));
+    position: absolute; 
+    
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 200px;
+    height: 300%;
+    animation: rotation 5s   infinite  linear;
+    
+}
+
+@keyframes rotation {
+    0% {
+        transform:  translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform:  translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
+
+.card::after {
+    content: '';
+    position: absolute; 
+    inset: 4px;
+    background: var(--main-color);
+  
+}
+
+.z_index{
+    position: relative;
+    z-index: 10;
+}
+
+/* END INFO SECTION */
+/* START FOOTER  */
+footer {
+    background-color: #2f313c;   
+}
+
+footer input[type='text']{
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: white !important;
+}
+
+footer input[type='text']:focus {
+    background-color: var(--main-color);
+}
+
+span.mine_background {
+    background-color: var(--main-color);
+    
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+@media  screen and (max-width: 600px) {
+    span.mine_background{
+        width: 37px;
+        height: 37px;
+    }
+}
+
+.hoverSocial  span,
+.hoverSocial  span i {
+    transition: .3s all;
+}
+
+.hoverSocial:hover  span {
+    background-color: var(--seconed-color);
+}
+.hoverSocial:hover  span i{
+    color: white !important;
+}
+
+footer .container .row .col-md-6  form {
+    margin-bottom: 20px;
+}
+footer .container .row .col-md-6  form button {
+    right: 9px;
+    top: 9px;
+}
+
+/* END FOOTER  */
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ------------------       END INDEX HTML     ---------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+
+/*text-contact*/
+.text-contact {
+    max-height: 100px;
+    height: 100px;
+}
+
+/* about image*/
+
+ .pig_box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s all;
+}
+
+.img {
+    position: relative;
+}
+.pig_box::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    background-image: linear-gradient(var(--seconed-color),rgba(57, 11, 121, 0.6));
+    transition: .3s all;
+    animation: lf 3s linear  infinite ;
+}
+
+@keyframes lf {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+.pig_box:hover::after {
+     opacity: 1;
+}
+
+.pig_box:hover .content {
+    z-index: 2;
+    opacity: 1;
+}
+
+.pig_box .content {
+    opacity: 0;
+    transition: .3s all;
+}
