@@ -155,7 +155,7 @@ function getCurrentCountry() {
       const {latitude, longitude } = position.coords;
       let currentCountry;
       //then el 7aga ele btrtrnha bseha lle b3deha
-      await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=69a8f63e8b96415ea569992bd8980f56`).
+      await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=7d77b96c972b4d119a315110121270`).
       then(response => response.json()).then((response) =>  currentCountry = response.results[0].components.country);
       if(serchInput) {
         weatherApi(currentCountry);
