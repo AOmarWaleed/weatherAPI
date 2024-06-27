@@ -41,7 +41,7 @@ if(serchInput) {
 
 async function weatherApi(countryName) {
 
-    await fetch(`http://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a315110121270&q=07112&days=3&q=${countryName}`,{
+    await fetch(`http://api.weatherapi.com/v1/forecast.json?key=cdbd30717f13476c95f182922242706&q=07112&days=3&q=${countryName}`,{
         method: 'POST'
     }).
     then(respons => respons.json()).
@@ -155,7 +155,7 @@ function getCurrentCountry() {
       const {latitude, longitude } = position.coords;
       let currentCountry;
       //then el 7aga ele btrtrnha bseha lle b3deha
-      await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=7d77b96c972b4d119a315110121270`).
+      await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=cdbd30717f13476c95f182922242706`).
       then(response => response.json()).then((response) =>  currentCountry = response.results[0].components.country);
       if(serchInput) {
         weatherApi(currentCountry);
