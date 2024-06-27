@@ -41,7 +41,7 @@ if(serchInput) {
 
 async function weatherApi(countryName) {
 
-    await fetch(`http://api.weatherapi.com/v1/forecast.json?key=a5fd66a922b846c8a84151328222905&q=07112&days=3&q=${countryName}`,{
+    await fetch(`http://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a315110121270&q=07112&days=3&q=${countryName}`,{
         method: 'POST'
     }).
     then(respons => respons.json()).
